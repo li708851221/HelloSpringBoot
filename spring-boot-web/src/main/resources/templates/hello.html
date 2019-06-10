@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<!--/*@thymesVar id="name" type="java.lang.String"*/-->
+<p th:text="'Hello！, ' + ${name} + '!'">3333</p>
+
+<div >
+    <h1>for 循环</h1>
+    <table>
+        <th>
+            <td>姓名</td>
+            <td>性别</td>
+            <td>密码</td>
+            <td>序号</td>
+        </th>
+        <tr  th:each="user,iterStat : ${users}">
+            <td th:text="${user.userName}">neo</td>
+            <td th:text="${user.userSex}">6</td>
+            <td th:text="${user.passWord}">213</td>
+            <td th:text="${iterStat.index}">index</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
